@@ -1,0 +1,307 @@
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+
+    --first-color:#70958b ; 
+    --first-color-alt: #2b6455; 
+    --first-color-light:#B2C1B7; 
+
+    --secundary-color:#ECB77A ; 
+    --secundary-color-alt:#91622c ; 
+    --secundary-color-light:#f1d2ae ; 
+
+    --third-color:#e0d7d7 ; 
+    --third-color-light:#C0C0C0 ; 
+    --third-color-alt:#727272 ; 
+
+    --light-color: #F4F4F3;
+    --light-color-alt: #d3cfc3;
+    
+    --dark-color: #2A261B;
+    --dark-color-light: #484133;
+
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 55%);
+
+    --body-color: #F4F4F3;
+    --container-color: #fff;
+    --border-color: #878267;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --title-font: "Dosis", sans-serif;;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 2.5rem;
+    --h4-font-size: 2rem ;
+    --normal-font-size: 1.5rem;
+    --small-font-size: 1.2rem;
+    --smaller-font-size: .8rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-bold: 700;
+  
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /* ========== Utilities ========== */
+    --transition: 0.4s ease-in-out;
+    --box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.4);
+    --box-shadowHard: 0px 10px 30px 1px rgba(0,0,0,0.6);
+    --box-shadowWhite: 0px 10px 30px 1px rgba(255, 255, 255, 0.1);
+    --border-radiusImg: 2rem;
+    --border-radiusSquare: 1.5rem;
+    --border-radiusHeader: 2.5rem;
+  }
+  
+  /* Responsive typography
+  @media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 2.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  } */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+body{
+    font-family: var(--body-font);
+    background-color: var(--first-color-alt);
+}
+  
+ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* ======== TIPOGRAFIA ======== */
+a{
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+}
+
+/* IMP */
+.main-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* UTILITIES */
+.no-pad{
+    padding: 0 !important;
+}
+.no-margin{
+    margin: 0 !important;
+}
+
+.text-c{
+    text-align: center;
+}
+
+/* === MAIN PROYECT === */
+.container{
+    width: 52rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+
+    background: var(--light-color);
+    border-radius: var(--border-radiusSquare);
+    box-shadow: 0px 0px 18px 3px rgba(255,255,255,1);
+    /* padding: 2rem; */
+}
+
+.container h2{
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin: 0;
+    border-bottom: 1px solid var(--light-color-alt);
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.input-box input{
+    width: 97%;
+    height: 6rem;
+
+    margin: 2.5rem  0 2rem 0;
+    padding-left:1.5rem ;
+    color: #000;
+    background: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: var(--border-radiusImg);
+    letter-spacing: 1.4px;
+    border: 1px solid var(--light-color-alt);
+}
+
+.input-box span{
+    position: absolute;
+    font-size: 2.5rem;
+    top: 4.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    color: var(--dark-color-light);
+    transition: 0.4s all ease-in-out;
+}
+.input-box span:hover{
+    color: var(--first-color-alt);
+}
+
+/* PASS INDICATOR */
+.wrapper .pass-indicator{
+    width: 90%;
+    height: 0.4rem;
+    position: relative;
+    margin: 0 auto;
+    border-radius: var(--border-radiusHeader);
+}
+.pass-indicator::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 50%;
+    border-radius: inherit;
+    transition: width 0.4s ease-in-out;
+}
+.pass-indicator#weak::before{
+    width: 25%;
+    background: #e64a4a;
+}
+.pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+.pass-indicator#strong::before{
+    width: 100%;
+    background: var(--first-color-alt);
+}
+
+/* PASS LENGTH */
+.pass-length{
+    margin-top: 0rem;
+    padding-top: 1.5rem;
+}
+
+.pass-length .details{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.pass-length input{
+    width: 450px;
+    margin-bottom: 3rem;
+    height: 5px;
+}
+
+/* CONFIGURACONES */
+.pass-settings{
+    width: 90%;
+}
+.pass-settings .title{
+    font-size: 1.8rem;
+}
+.pass-settings .options{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.pass-settings .options .option{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    width: 50%;
+}
+
+.options .option:first-child{
+    pointer-events: none;
+}
+
+.options .option:first-child input{
+    opacity: 0.7;
+}
+
+.options .option input{
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+.options .option label{
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+
+.wrapper .generate-btn{
+    width: 90%;
+    
+    border: none;
+    outline: none;
+    padding: 1.5rem 0;
+    margin: 1.5rem 0 2.5rem;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.8rem;
+    background-color: var(--first-color-alt);
+
+}
