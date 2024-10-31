@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO Juego</title>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- ==== FONTS ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- ==== ICONS ====  -->
+    <script src="https://kit.fontawesome.com/f9c120c86f.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <h1>3 en linea</h1>
+    <p>Desarrolado por: For Olympus</p>
+    <div class="container">
+        <div class="block">
+            <div id="box1" class="box top left">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+
+            <div id="box2" class="box top">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+
+            <div id="box3" class="box top right">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="block">
+            <div id="box4" class="box left">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+
+            <div id="box5" class="box">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+
+            <div id="box6" class="box right">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+        </div>
+
+        <div class="block">
+            <div id="box7" class="box bottom left">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+
+            <div id="box8" class="box bottom">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+
+            <div id="box9" class="box bottom right">
+                <span data-player="none" onclick="play(this)">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <!-- ==== JS ==== -->
+    <script src="src/js/app.js"></script>
+</body>
+</html>
