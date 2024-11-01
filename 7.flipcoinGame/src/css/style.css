@@ -1,0 +1,269 @@
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+
+    --first-color:#70958b ; 
+    --first-color-alt: #2b6455; 
+    --first-color-light:#B2C1B7; 
+
+    --secundary-color:#ECB77A ; 
+    --secundary-color-alt:#91622c ; 
+    --secundary-color-light:#f1d2ae ; 
+
+    --third-color:#e0d7d7 ; 
+    --third-color-light:#C0C0C0 ; 
+    --third-color-alt:#727272 ; 
+
+    --light-color: #F4F4F3;
+    --light-color-alt: #d3cfc3;
+    
+    --dark-color: #2A261B;
+    --dark-color-light: #484133;
+
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --text-color-light: hsl(0, 0%, 55%);
+
+    --body-color: #F4F4F3;
+    --container-color: #fff;
+    --border-color: #878267;
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --title-font: "Dosis", sans-serif;;
+    --biggest-font-size: 4rem;
+    --h1-font-size: 3.5rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 2.5rem;
+    --h4-font-size: 2rem ;
+    --normal-font-size: 1.5rem;
+    --small-font-size: 1.2rem;
+    --smaller-font-size: .8rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-bold: 700;
+  
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /* ========== Utilities ========== */
+    --transition: 0.4s ease-in-out;
+    --box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.4);
+    --box-shadowHard: 0px 10px 30px 1px rgba(0,0,0,0.6);
+    --box-shadowWhite: 0px 10px 30px 1px rgba(255, 255, 255, 0.1);
+    --border-radiusImg: 2rem;
+    --border-radiusSquare: 1.5rem;
+    --border-radiusHeader: 2.5rem;
+  }
+  
+  /* Responsive typography
+  @media screen and (min-width: 968px) {
+    :root {
+      --biggest-font-size: 2.5rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+  } */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+
+body{
+    font-family: var(--body-font);
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #575ce5 50%, #f9fbfc 50%) fixed;
+    color: var(--dark-color);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* ======== TIPOGRAFIA ======== */
+a{
+    color: var(--light-color);
+    font-size: var(--normal-font-size);
+    text-decoration: none;
+}
+
+/* IMP */
+.section__title{
+    font-size: var(--biggest-font-size);
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 5rem;
+}
+.section__title::before{
+    content: '';
+    background-color: var(--light-color);
+    position: absolute;
+    width: 20%;
+    height: 0.5rem;
+    bottom: -10px;
+}
+
+.container{
+    width: 40rem ;
+    background-color: var(--light-color);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1.5rem;
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+/* UTILITIES */
+.no-pad{
+    padding: 0 !important;
+}
+.no-margin{
+    margin: 0 !important;
+}
+
+.text-c{
+    text-align: center;
+}
+
+
+.stats{
+    text-align: right;
+    color: #101020;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.coin{
+    height: 20rem;
+    width: 20rem;
+    position: relative;
+    margin: 0 auto 5rem auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.tails{
+    transform: rotateX(180deg);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.coin img{
+    width: 20rem;
+}
+
+.heads, .tails{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+button{
+    width: 12rem;
+    padding: 1.8rem 0;
+    border: 2.5px solid #424ae0;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#flip-button{
+    background: #424ae0;
+    color: #fff;
+}
+
+#flip-button:disabled{
+    background-color: #e1e0ee;
+    color: #101020;
+    border-color: #e1e0ee;
+}
+
+#reset-button{
+    background: #fff;
+    color: #424ae0;
+}
+
+@keyframes spin-tails{
+    0%{
+        transform: rotateX(0); 
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+@keyframes spin-heads{
+    0%{
+        transform: rotateX(0); 
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+
+@media (max-width: 500px) { 
+    .container{
+        width: 70%;
+        padding: 3rem;
+    }
+
+    .buttons{
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    button{
+        width: 100%
+    }
+}
