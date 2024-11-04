@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Login</title>
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <!-- ==== FONTS ==== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- ==== ICONS ====  -->
+    <script src="https://kit.fontawesome.com/f9c120c86f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="step-row">
+                <div class="progress" id="progress"></div>
+                <div class="step" id="step">
+                    <p><i class="fa-solid fa-plus"></i> Paso 1</p>
+                </div>
+                <div class="step" id="step">
+                    <p><i class="fa-solid fa-people-arrows"></i> Paso 2</p>
+                </div>
+                <div class="step" id="step">
+                    <p><i class="fa-solid fa-user"></i> Paso 3</p>
+                </div>
+            </div>
+    
+            <div class="main">
+    
+                <div class="section" id="section1">
+                    <h2>Crear Cuenta</h2>
+    
+                    <form action="" class="form" id="form1">
+                        <input type="email" class="box" name="" id="" placeholder="Email">
+                        <input type="password" class="box" name="" id="" placeholder="Contraseña">
+                        <input type="password" class="box" name="" id="" placeholder="Confirmar Contraseña">
+        
+                        <div class="btn-box">
+                            <input type="button" class="btn" id="nextBtn1" value="Siguiente">
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="section"  id="section2">
+                    <h2>Redes Sociales</h2>
+    
+                    <form action="" class="form" id="form2">
+                        <input type="text" class="box" name="" id="" placeholder="Instagram">
+                        <input type="text" class="box" name="" id="" placeholder="Facebook">
+                        <input type="text" class="box" name="" id="" placeholder="Twitter">
+        
+                        <div class="btn-box">
+                            <input type="button" class="btn" id="backBtn1" value="Atras">
+                            <input type="button" class="btn" id="nextBtn2" value="Siguiente">
+                        </div>
+                    </form>
+                </div>
+    
+                <div class="section"  id="section3">
+                    <h2>Informacion Personal</h2>
+    
+                    <form action="" class="form" id="form3">
+                        <input type="text" class="box" name="" id="" placeholder="Nombre">
+                        <input type="text" class="box" name="" id="" placeholder="Apellido">
+                        <input type="number" class="box" name="" id="" placeholder="Celular - Whatsapp">
+        
+                        <div class="btn-box">
+                            <input type="button" class="btn" id="backBtn2" value="Atras">
+                            <input type="button" class="btn" id="submitBtn" value="Enviar">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="section"  id="section4">
+                    <h1>Envio Completo</h1>
+
+                    <img src="src/img/check.webp" alt="">
+                    <p>Tus datos se han enviado correctamente :)...</p>
+                </div>
+               
+            </div>
+    
+    
+        </div>
+    </div>
+    <!-- ==== JS ==== -->
+    <script src="src/js/app.js"></script>
+</body>
+</html>
